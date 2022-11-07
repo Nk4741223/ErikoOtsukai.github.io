@@ -66,12 +66,12 @@ const gongefirstArr = [];
 const sideLength = 50;
 
 const devilThisArr = [];
-const devilThisWidth = 734;
-const devilThisHight = 388;
+const devilThisWidth = 734 * 2 / 3;
+const devilThisHight = 388 * 2 / 3;
 
 const devilPromiseArr = [];
-const devilPromiseWidth = 550;
-const devilPromiseHight = 250;
+const devilPromiseWidth = 550 * 2 / 3;
+const devilPromiseHight = 250 * 2 / 3;
 
 const gongeArr = [];
 const gongeWidth = 50;
@@ -97,19 +97,19 @@ const level = document.getElementById("level_value");
 function getlevel() {
   switch(level.value) {
     case "レベル1" : 
-    countThreshold = 110;
+    countThreshold = 200;
     break ;
   case "レベル2" : 
-    countThreshold = 80;
+    countThreshold = 125;
     break ;
   case "レベル3" : 
-    countThreshold = 50;
+    countThreshold = 75;
     break ;    
   case "レベル4" : 
-    countThreshold = 30;
+    countThreshold = 50;
     break ;
   case "レベル5" : 
-    countThreshold = 20;
+    countThreshold = 25;
     break ;
   case "レベル鬼" : 
     countThreshold = 1;
