@@ -100,7 +100,7 @@ function getlevel() {
     countThreshold = 200;
     break ;
   case "レベル2" : 
-    countThreshold = 125;
+    countThreshold = 110;
     break ;
   case "レベル3" : 
     countThreshold = 75;
@@ -191,7 +191,7 @@ function gameStart() {
     devilPromiseWidth = 550;
     devilPromiseHight = 250;
 
-  } else if (level.value === "レベル1") {
+  } else if (level.value === "レベル1" || level.value === "レベル2") {
     devilThisWidth = 734/3;
     devilThisHight = 388/3;
     devilPromiseWidth = 550/3;
@@ -338,7 +338,7 @@ const draw = () => {
     }
     if (level.value === "レベル1") {
       gongeArr[i].x -= scrollSpeed;
-    } else if (level.value === "レベル2") {
+    } else if (level.value === "レベル2" || level.value === "レベル3") {
       gongeArr[i].x -= scrollSpeed * 2;
     } else {
       gongeArr[i].x -= scrollSpeed * 5;
