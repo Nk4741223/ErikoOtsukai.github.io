@@ -22,7 +22,7 @@ bird.src = "image/flogGirl.png";
 doutor.src = "image/doutor.png";
 flappecino.src = "image/flappecino.png";
 devilThis.src = "image/this.png";
-bumped.src = "image/ぶつかった.png";
+bumped.src = "image/bumped.png";
 devilPromise.src = "image/promise.png";
 gonge.src = "image/gonge.png";
 
