@@ -158,8 +158,18 @@ const crearImg = document.getElementById("crear-img");
 const levelForm = document.getElementById("level_form");
 
 
+// 音量
+document.getElementById("bgm1_sound").volume = 0.02;
+document.getElementById("mario_sound").volume = 0.1;
+document.getElementById("jump_sound").volume =  0.1;
+document.getElementById("crear_sound").volume =  0.1;
+document.getElementById("over_sound").volume =  0.1;
+document.getElementById("push_sound").volume =  0.1;
+document.getElementById("dump_sound").volume =  0.1;
+document.getElementById("get_sound").volume =  0.1;
+document.getElementById("gonge_sound").volume = 0.1;
+
 // BGM
-document.getElementById("bgm1_sound").volume = 0.1;
 function soundBgm1(){
   document.getElementById("bgm1_sound").load();
   document.getElementById("bgm1_sound").play();
