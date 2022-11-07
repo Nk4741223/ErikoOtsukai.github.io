@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <title>Erikoからのおつかい</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 音 -->
+  <audio id="jump_sound" src="audio/jump2.mp3" preload="auto"></audio>
+  <audio id="crear_sound" src="audio/crear.mp3" preload="auto"></audio>
+  <audio id="over_sound" src="audio/over.mp3" preload="auto"></audio>
+  <audio id="push_sound" src="audio/push.mp3" preload="auto"></audio>
+  <audio id="dump_sound" src="audio/dump.mp3" preload="auto"></audio>
+  <audio id="bgm1_sound" src="audio/bgm1.mp3" preload="auto"></audio>
+  <audio id="get_sound" src="audio/get.mp3" preload="auto"></audio>
+  <audio id="gonge_sound" src="audio/gonge.mp3" preload="auto"></audio>
+  <audio id="mario_sound" src="audio/mario.mp3" preload="auto"></audio>
+  
+  <!-- 画像 -->
+  <img src="image/firstImage.png" alt="初めの画像" id="first-img">
+  <img src="image/afterImage1.png" alt="最後の画像1" id="after1-img">
+  <img src="image/afterImage2.png" alt="最後の画像2" id="after2-img">
+  <img src="image/OVER.png" alt="ゲームオーバー" id="over-img">
+  <img src="image/CLEAR.png" alt="ゲームクリア" id="crear-img">
+
+  <!-- canvas -->
+  <canvas id="canvas", width="800px", height="480px"></canvas>
+
+  <!-- ボタン -->
+  <div class ="button_First">
+    <a href="#" id="next-btn">GAME START!</a>
+  </div>
+  <div id="level_form">
+    <br>レベルを選択してください。
+    <select id="level_value">
+      <!-- <option hidden>？</option> -->
+      <option>レベル3</option>
+      <option>レベル1</option>
+      <option>レベル2</option>
+      <option>レベル4</option>
+      <option>レベル5</option>
+      <option>レベル鬼</option>
+    </select>
+  </div>
+  <div>
+    <button type="submit" id="next2-btn">次へ</button>
+    <button type="submit" id="next3-btn">次へ</button>
+  </div>
+  <div class ="button_First">
+    <br>
+    <a href="#" id="retry-btn">Otsukai Again?</a>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
