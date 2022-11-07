@@ -66,12 +66,12 @@ const gongefirstArr = [];
 const sideLength = 50;
 
 const devilThisArr = [];
-const devilThisWidth = 734 * 2 / 3;
-const devilThisHight = 388 * 2 / 3;
+let devilThisWidth = 734 * 2 / 3;
+let devilThisHight = 388 * 2 / 3;
 
 const devilPromiseArr = [];
-const devilPromiseWidth = 550 * 2 / 3;
-const devilPromiseHight = 250 * 2 / 3;
+let devilPromiseWidth = 550 * 2 / 3;
+let devilPromiseHight = 250 * 2 / 3;
 
 const gongeArr = [];
 const gongeWidth = 50;
@@ -185,6 +185,23 @@ nextBtn.addEventListener("click", () => {
 
 // ゲーム開始関数
 function gameStart() {
+  if (level.value === "レベル4" || level.value === "レベル5") {
+    devilThisWidth = 734;
+    devilThisHight = 388;
+    devilPromiseWidth = 550;
+    devilPromiseHight = 250;
+
+  } else if (level.value === "レベル1") {
+    devilThisWidth = 734/3;
+    devilThisHight = 388/3;
+    devilPromiseWidth = 550/3;
+    devilPromiseHight = 250/3;
+  } else {
+    devilThisWidth = 734 * 2 / 3;
+    devilThisHight = 388 * 2 / 3;
+    devilPromiseWidth = 550 * 2 / 3;
+    devilPromiseHight = 250 * 2 / 3;
+  }
   document.getElementById("bgm1_sound").pause();
   getlevel();
   firstImg.style.display = "none";
@@ -276,8 +293,6 @@ function gameCrear(){
 }
 
 
-
-
 // 描画関数
 const draw = () => {
   //カエル中心座標の更新
@@ -321,7 +336,13 @@ const draw = () => {
     if (!gongefirstArr[i]){
       ctx.drawImage(gonge, gongeArr[i].x, gongeArr[i].y, gongeWidth, gongeHight);
     }
-    gongeArr[i].x -= scrollSpeed*5;
+    if (level.value === "レベル1") {
+      gongeArr[i].x -= scrollSpeed;
+    } else if (level.value === "レベル2") {
+      gongeArr[i].x -= scrollSpeed * 2;
+    } else {
+      gongeArr[i].x -= scrollSpeed * 5;
+    }
 
     if (count % 6 < 2) {
       gongeArr[i].y += scrollSpeed*5;
